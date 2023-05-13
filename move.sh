@@ -1,4 +1,32 @@
 
+# Error Handling 
+if [ $# -eq 0 ]
+then
+    echo "Please specify directory to be copyed and destination"
+    exit
+elif [ $# -eq 1 ]
+then
+    echo "Please specify directory to be copyed and destination"
+    exit
+elif [ $# -eq 2 ]
+then
+    if [ ! -e $1 ]
+    then
+        echo "No such file or directory found: $1"
+        exit
+    fi
+    if [ ! -e $2 ]
+    then
+        echo "No such directory found: $2"
+        exit
+    else
+        if [ -f $2 ]
+        then
+            echo "Destination must be a directory. $2 is a file"
+        fi
+    fi
+fi
+
 count=0
 # get the total number of files and directories in a directory we 
 # want to move ($1 is the source)
