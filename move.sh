@@ -48,12 +48,12 @@ do
 	do
 		str=$str"="
 	done
-	((count++))
+	
 	for (( i=0; i<(total-count); i++))
 	do
 		str=$str" "
 	done
-	
+	((count++))
 	str=$str"] ($count/$total): $fname"
 	printf "$str\r"
 	
