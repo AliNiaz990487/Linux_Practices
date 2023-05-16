@@ -60,7 +60,7 @@ do
 #The sleep is to just slow things down because I am copying a small file 
 	sleep 1
 	
-#Mere aqal ko daad dain file ka name move.sh hai aur asal me karta copying hai 
+
 	# copy the source files one by one and increament progress
 	cp -r ${1}/$fname ${2}/$backupDir
 	
